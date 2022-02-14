@@ -1,3 +1,5 @@
+#!/bin/bash
+
 for k in {0..4}
 do
     echo "key = $k"
@@ -14,7 +16,7 @@ do
     python src/main-bc.py -k $k --silent
 
     echo "simulating results ..."
-    python src/eval-simu1.py
+    python src/eval1-simu.py -k $k
 done
 
 echo '---'
